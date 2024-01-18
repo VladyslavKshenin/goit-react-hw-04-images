@@ -54,6 +54,7 @@ export default function App() {
 
   useEffect(() => {
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery, page]);
 
   const handleError = (error) => {
