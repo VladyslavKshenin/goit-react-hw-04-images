@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import css from './App.module.css';
 import Searchbar from './Searchbar/Searchbar';
 import Loader from './Loader/Loader';
 import ImageGallery from './ImageGalery/ImageGallery';
@@ -107,7 +106,7 @@ export default class App extends Component {
     const { pendingRequest, picturesSet, searchMatches, totalHits } =
       this.state;
     return (
-      <div className={css.App}>
+      <div>
         <Searchbar onSubmit={this.handleQuery} />
         {picturesSet.length > 0 && <ImageGallery pictures={picturesSet} />}
         {pendingRequest && <Loader />}
